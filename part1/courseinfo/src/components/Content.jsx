@@ -6,9 +6,9 @@ const Part = ({ part, exercises }) => {
   )
 }
 
-const Content = ({ content }) => {
-  console.log(content)
-  return content.map((item, index) => {
+const Content = ({ parts }) => {
+  console.log(parts)
+  return parts.map((item, index) => {
     return (
       <Part key={index} part={item.name} exercises={item.exercises} />
     )
