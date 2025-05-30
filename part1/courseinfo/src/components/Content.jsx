@@ -1,9 +1,16 @@
+const Part = ({ part, exercises }) => {
+  return (
+    <p>
+      {part} {exercises}
+    </p>
+  )
+}
+
 const Content = ({ content }) => {
+  console.log(content)
   return content.map((item, index) => {
     return (
-      <p key={index}>
-        {item.part} {item.exercises}
-      </p>
+      <Part key={index} part={item.name} exercises={item.exercises} />
     )
   })
 }
